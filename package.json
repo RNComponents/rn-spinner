@@ -1,0 +1,12 @@
+{
+  "name": "rn-spinner",
+  "version": "0.0.1",
+  "description": "Number spinner for react-native",
+  "keywords": ["react-native", "spinner", "react-component"],
+  "author": {
+    "name": "Fantasy Shao",
+    "url": "http://fantasy.codes",
+    "email": "fantasyshao@icloud.com"
+  },
+  "license": "MIT"
+}
