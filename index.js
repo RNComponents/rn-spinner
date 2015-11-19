@@ -5,7 +5,8 @@ var styles = require('./style');
 
 var {
   View,
-  Text
+  Text,
+  TouchableOpacity
 } = React;
 
 var Spinner = React.createClass({
@@ -17,9 +18,9 @@ var Spinner = React.createClass({
     }
   },
 
-  _onNumChange () {
-    if (this.props.onNumChange) this.props.onNumChange(this.state.num);
-  }
+  _onNumChange (num) {
+    if (this.props.onNumChange) this.props.onNumChange(num);
+  },
 
   _increase () {
    if (this.state.max > this.state.num) {
