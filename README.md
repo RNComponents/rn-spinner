@@ -16,14 +16,20 @@ npm install rn-spinner --save
 var Spinner = require('rn-spinner');
 
 // Use
-<Spinner max={10} min={2} onNumChange={(num)=>{console.log(num)}}
+<Spinner max={10}
+         min={2}
+         default={5}
+         color="#f60"
+         onNumChange={(num)=>{console.log(num)}}
 ```
 
 ## Props
 
 - max
 - min
+- default: default number of the Spinner
 - onNumChange: get the number of the Spinner
+- color: custom color of the Spinner
 
 ## Screenshot
 

@@ -6,15 +6,32 @@ var styles = require('./style');
 var {
   View,
   Text,
-  TouchableOpacity
+  TouchableOpacity,
+  PropTypes
 } = React;
 
 var Spinner = React.createClass({
+  propTypes: {
+    min: PropTypes.number,
+    max: PropTypes.number,
+    default: PropTypes.number,
+    color: PropTypes.string
+  },
+
+  getDefaultProps () {
+    return {
+      min: 0,
+      max: 99,
+      default: 0,
+      color: '#33c9d6'
+    }
+  },
+
   getInitialState () {
     return {
-      min: this.props.min || 0,
-      max: this.props.max || 99,
-      num: this.props.default || 0
+      min: this.props.min,
+      max: this.props.max,
+      num: this.props.default
     }
   },
 
@@ -46,14 +63,14 @@ var Spinner = React.createClass({
 
   render () {
     return (
-      <View style={styles.container}>
-        <TouchableOpacity style={styles.btn} onPress={this._decrease}>
+      <View style={[styles.container, {borderColor:this.props.color}]}>
+        <TouchableOpacity style={[styles.btn, {backgroundColor:this.props.color}]} onPress={this._decrease}>
           <Text style={styles.btnText}>-</Text>
         </TouchableOpacity>
         <View style={styles.num}>
           <Text style={styles.numText}>{this.state.num}</Text>
         </View>
-        <TouchableOpacity style={styles.btn} onPress={this._increase}>
+        <TouchableOpacity style={[styles.btn, {backgroundColor:this.props.color}]} onPress={this._increase}>
           <Text style={styles.btnText}>+</Text>
         </TouchableOpacity>
       </View>
