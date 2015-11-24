@@ -25,7 +25,6 @@ module.exports = React.StyleSheet.create({
   },
 
   numText: {
-    color:'#333',
     width:30,
     textAlign:'center'
   }

@@ -15,7 +15,8 @@ var Spinner = React.createClass({
     min: PropTypes.number,
     max: PropTypes.number,
     default: PropTypes.number,
-    color: PropTypes.string
+    color: PropTypes.string,
+    numColor: PropTypes.string
   },
 
   getDefaultProps () {
@@ -23,7 +24,8 @@ var Spinner = React.createClass({
       min: 0,
       max: 99,
       default: 0,
-      color: '#33c9d6'
+      color: '#33c9d6',
+      numColor: '#333'
     }
   },
 
@@ -68,7 +70,7 @@ var Spinner = React.createClass({
           <Text style={styles.btnText}>-</Text>
         </TouchableOpacity>
         <View style={styles.num}>
-          <Text style={styles.numText}>{this.state.num}</Text>
+          <Text style={[styles.numText, {color:this.props.numColor}]}>{this.state.num}</Text>
         </View>
         <TouchableOpacity style={[styles.btn, {backgroundColor:this.props.color}]} onPress={this._increase}>
           <Text style={styles.btnText}>+</Text>
