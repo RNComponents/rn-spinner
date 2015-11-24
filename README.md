@@ -20,6 +20,7 @@ var Spinner = require('rn-spinner');
          min={2}
          default={5}
          color="#f60"
+         numColor="#f60"
          onNumChange={(num)=>{console.log(num)}}
 ```
 
@@ -28,8 +29,9 @@ var Spinner = require('rn-spinner');
 - max
 - min
 - default: default number of the Spinner
-- onNumChange: get the number of the Spinner
 - color: custom color of the Spinner
+- numColor: custom number color
+- onNumChange: get the number of the Spinner
 
 ## Screenshot
 

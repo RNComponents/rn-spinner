@@ -1,8 +1,17 @@
 {
   "name": "rn-spinner",
-  "version": "0.1.3",
+  "version": "0.1.4",
   "description": "Number spinner for react-native",
-  "keywords": ["react-native", "spinner", "react-component"],
+  "keywords": [
+    "react-native",
+    "spinner",
+    "react-component",
+    "ios"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/RNComponents/rn-spinner"
+  },
   "author": {
     "name": "Fantasy Shao",
     "url": "http://fantasy.codes",
