@@ -1,6 +1,14 @@
 rn-spinner
 ---
 
+[![NPM version][npm-image]][npm-url]
+[![npm download][download-image]][download-url]
+
+[npm-image]: http://img.shields.io/npm/v/rn-spinner.svg?style=flat-square
+[npm-url]: http://npmjs.org/package/rn-spinner
+[download-image]: https://img.shields.io/npm/dm/rn-spinner.svg?style=flat-square
+[download-url]: https://npmjs.org/package/rn-spinner
+
 Number Spinner component for react-native.
 
 ## Install
@@ -31,11 +39,20 @@ var Spinner = require('rn-spinner');
 - default: default number of the Spinner
 - color: custom color of the Spinner
 - numColor: custom number color
+- numBgColor: background color of number button
 - onNumChange: get the number of the Spinner
+- showBorder: show the border of the Spinner
+- disabled: disable the Spinner
+- fontSize: custom fontSize of the Spinner
+- buttonTextColor: custom color of the button in the Spinner
 
 ## Screenshot
 
-![example](example.png)
+<img width="50%" src="example.png" />
+
+## Feedback
+
+[Issues](https://github.com/RNComponents/rn-spinner/issues)
 
 ## License
 
