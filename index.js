@@ -20,8 +20,11 @@ var Spinner = React.createClass({
     numBgColor: PropTypes.string,
     showBorder: PropTypes.bool,
     fontSize: PropTypes.number,
+    btnFontSize: PropTypes.number,
     buttonTextColor: PropTypes.string,
-    disabled: PropTypes.bool
+    disabled: PropTypes.bool,
+    width: PropTypes.number,
+    height: PropTypes.number,
   },
 
   getDefaultProps () {
@@ -34,8 +37,11 @@ var Spinner = React.createClass({
       numBgColor: 'white',
       showBorder: true,
       fontSize: 14,
+      btnFontSize: 14,
       buttonTextColor: 'white',
-      disabled: false
+      disabled: false,
+      width: 90,
+      height: 30
     }
   },
 
@@ -79,34 +85,39 @@ var Spinner = React.createClass({
 
   render () {
     return (
-      <View style={[styles.container, { borderColor: this.props.showBorder ? this.props.color : 'transparent' } ]}>
+      <View style={[styles.container,
+        { borderColor: this.props.showBorder ? this.props.color : 'transparent' },
+        { width: this.props.width } ]}>
         <TouchableOpacity
           style={[styles.btn,
             { backgroundColor: this.props.color },
-            { borderColor: this.props.showBorder ? this.props.color : 'transparent' }]}
+            { borderColor: this.props.showBorder ? this.props.color : 'transparent' },
+            { height: this.props.height } ]}
           onPress={this._decrease}>
           <Text style={[styles.btnText,
               {
                 color: this.props.buttonTextColor,
-                fontSize: this.props.fontSize
+                fontSize: this.props.btnFontSize
               }]}>-</Text>
         </TouchableOpacity>
         <View style={[styles.num,
             {
               borderColor: this.props.showBorder ? this.props.color : 'transparent',
-              backgroundColor: this.props.numBgColor
+              backgroundColor: this.props.numBgColor,
+              height: this.props.height
             }]}>
           <Text style={[styles.numText, {color:this.props.numColor, fontSize: this.props.fontSize}]}>{this.state.num}</Text>
         </View>
         <TouchableOpacity
           style={[styles.btn,
             { backgroundColor: this.props.color },
-            { borderColor: this.props.showBorder ? this.props.color : 'transparent' }]}
+            { borderColor: this.props.showBorder ? this.props.color : 'transparent' },
+            { height: this.props.height } ]}
           onPress={this._increase}>
           <Text style={[styles.btnText,
               {
                 color: this.props.buttonTextColor,
-                fontSize: this.props.fontSize
+                fontSize: this.props.btnFontSize
               }]}>+</Text>
         </TouchableOpacity>
       </View>
