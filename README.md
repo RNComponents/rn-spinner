@@ -43,8 +43,11 @@ var Spinner = require('rn-spinner');
 - onNumChange: get the number of the Spinner
 - showBorder: show the border of the Spinner
 - disabled: disable the Spinner
-- fontSize: custom fontSize of the Spinner
+- fontSize: custom fontSize of the text input in the Spinner
+- btnFontSize: custom fontSize of buttons in the Spinner
 - buttonTextColor: custom color of the button in the Spinner
+- width: custom width of the spinner
+- height: custom height of the spinner
 
 ## Screenshot
 
