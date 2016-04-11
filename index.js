@@ -1,14 +1,12 @@
-'use strict';
-
-var React = require('react-native');
-var styles = require('./style');
+var React = require('react-native')
+var styles = require('./style')
 
 var {
   View,
   Text,
   TouchableOpacity,
   PropTypes
-} = React;
+} = React
 
 var Spinner = React.createClass({
   propTypes: {
@@ -54,34 +52,35 @@ var Spinner = React.createClass({
   },
 
   _onNumChange (num) {
-    if (this.props.onNumChange) this.props.onNumChange(num);
+    if (this.props.onNumChange) this.props.onNumChange(num)
   },
 
   _increase () {
-    if (this.props.disabled) return;
+    if (this.props.disabled) return
 
     if (this.state.max > this.state.num) {
-      var num = this.state.num;
+      var num = this.state.num
       this.setState({
         num: ++num
-      });
+      })
 
-      this._onNumChange(num);
+      this._onNumChange(num)
     }
- },
+  },
 
- _decrease () {
-   if (this.props.disabled) return;
+  _decrease () {
+    if (this.props.disabled) return
 
-   if (this.state.min < this.state.num) {
-     var num = this.state.num;
-     this.setState({
-       num: --num
-     });
+    if (this.state.min < this.state.num) {
+      var num = this.state.num
 
-     this._onNumChange(num);
-   }
- },
+      this.setState({
+        num: --num
+      })
+
+      this._onNumChange(num)
+    }
+  },
 
   render () {
     return (
@@ -95,34 +94,26 @@ var Spinner = React.createClass({
             { height: this.props.height } ]}
           onPress={this._decrease}>
           <Text style={[styles.btnText,
-              {
-                color: this.props.buttonTextColor,
-                fontSize: this.props.btnFontSize
-              }]}>-</Text>
+              { color: this.props.buttonTextColor, fontSize: this.props.btnFontSize }]}>-</Text>
         </TouchableOpacity>
         <View style={[styles.num,
-            {
-              borderColor: this.props.showBorder ? this.props.color : 'transparent',
-              backgroundColor: this.props.numBgColor,
-              height: this.props.height
+            { borderColor: this.props.showBorder ? this.props.color : 'transparent', backgroundColor: this.props.numBgColor, height: this.props.height
             }]}>
-          <Text style={[styles.numText, {color:this.props.numColor, fontSize: this.props.fontSize}]}>{this.state.num}</Text>
+          <Text style={[styles.numText, {color: this.props.numColor, fontSize: this.props.fontSize}]}>{this.state.num}</Text>
         </View>
         <TouchableOpacity
           style={[styles.btn,
             { backgroundColor: this.props.color },
             { borderColor: this.props.showBorder ? this.props.color : 'transparent' },
-            { height: this.props.height } ]}
+            { height: this.props.height }]}
           onPress={this._increase}>
           <Text style={[styles.btnText,
-              {
-                color: this.props.buttonTextColor,
-                fontSize: this.props.btnFontSize
+              { color: this.props.buttonTextColor, fontSize: this.props.btnFontSize
               }]}>+</Text>
         </TouchableOpacity>
       </View>
-    );
+    )
   }
-});
+})
 
-module.exports = Spinner;
+module.exports = Spinner

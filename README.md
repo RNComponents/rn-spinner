@@ -3,6 +3,7 @@ rn-spinner
 
 [![NPM version][npm-image]][npm-url]
 [![npm download][download-image]][download-url]
+[![js-standard-style](https://img.shields.io/badge/code%20style-standard-brightgreen.svg)](http://standardjs.com/)
 
 [npm-image]: http://img.shields.io/npm/v/rn-spinner.svg?style=flat-square
 [npm-url]: http://npmjs.org/package/rn-spinner

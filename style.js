@@ -1,4 +1,4 @@
-var React = require('react-native');
+var React = require('react-native')
 
 module.exports = React.StyleSheet.create({
   container: {
@@ -11,12 +11,12 @@ module.exports = React.StyleSheet.create({
   btn: {
     flex: 1,
     alignItems: 'center',
-    justifyContent: 'center',
+    justifyContent: 'center'
   },
 
   btnText: {
     color: 'white',
-    textAlign: 'center',
+    textAlign: 'center'
   },
 
   num: {
@@ -26,6 +26,6 @@ module.exports = React.StyleSheet.create({
   },
 
   numText: {
-    textAlign:'center'
+    textAlign: 'center'
   }
-});
+})
