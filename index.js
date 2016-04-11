@@ -24,7 +24,7 @@ var Spinner = React.createClass({
     buttonTextColor: PropTypes.string,
     disabled: PropTypes.bool,
     width: PropTypes.number,
-    height: PropTypes.number,
+    height: PropTypes.number
   },
 
   getDefaultProps () {
