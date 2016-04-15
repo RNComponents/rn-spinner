@@ -35,20 +35,22 @@ var Spinner = require('rn-spinner');
 
 ## Props
 
-- max
-- min
-- default: default number of the Spinner
-- color: custom color of the Spinner
-- numColor: custom number color
-- numBgColor: background color of number button
-- onNumChange: get the number of the Spinner
-- showBorder: show the border of the Spinner
-- disabled: disable the Spinner
-- fontSize: custom fontSize of the text input in the Spinner
-- btnFontSize: custom fontSize of buttons in the Spinner
-- buttonTextColor: custom color of the button in the Spinner
-- width: custom width of the spinner
-- height: custom height of the spinner
+Property          | Description | Type | Default | Note
+------------------|-------------|------|---------|-------
+max               | | number | 0  |
+min               | | number | 99 |
+default           | default number of the Spinner | number | 0 |
+color             | custom color of the Spinner | string | '#33c9d6' |
+numColor          | custom number color | string | '#333' |
+numBgColor        | background color of number button | string | 'white' |
+onNumChange       | get the number of the Spinner | func | |
+showBorder        | show the border of the Spinner or not | bool | true |
+disabled          | disable the Spinner or not | bool | false |
+fontSize          | custom fontSize of the text input in the Spinner | number | 14 |
+btnFontSize       | custom fontSize of buttons in the Spinner | number | 14 |
+buttonTextColor   | custom color of the button in the Spinner | string | 'white' |
+width             | custom width of the Spinner | number | 90 |
+height            | custom height of the Spinner | number | 30 |
 
 ## Screenshot
 
