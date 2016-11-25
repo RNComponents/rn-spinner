@@ -1,12 +1,13 @@
-var React = require('react-native')
+var React = require('react')
+var ReactNative = require('react-native')
 var styles = require('./style')
 
+var {PropTypes} = React
 var {
   View,
   Text,
-  TouchableOpacity,
-  PropTypes
-} = React
+  TouchableOpacity
+} = ReactNative
 
 var Spinner = React.createClass({
   propTypes: {
