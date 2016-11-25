@@ -2,7 +2,7 @@ var React = require('react')
 var ReactNative = require('react-native')
 var styles = require('./style')
 
-var {PropTypes} = React
+var { PropTypes } = React
 var {
   View,
   Text,
