@@ -14,6 +14,7 @@ var Spinner = React.createClass({
     min: PropTypes.number,
     max: PropTypes.number,
     default: PropTypes.number,
+    value: PropTypes.number,
     color: PropTypes.string,
     numColor: PropTypes.string,
     numBgColor: PropTypes.string,
@@ -48,7 +49,25 @@ var Spinner = React.createClass({
     return {
       min: this.props.min,
       max: this.props.max,
-      num: this.props.default
+      num: typeof this.props.value !== 'undefined' ? this.props.value : this.props.default
+    }
+  },
+
+  componentWillReceiveProps (nextProps) {
+    if (nextProps.min) {
+      this.setState({
+        min: nextProps.min
+      })
+    }
+    if (nextProps.max) {
+      this.setState({
+        max: nextProps.max
+      })
+    }
+    if (nextProps.value) {
+      this.setState({
+        num: nextProps.value
+      })
     }
   },
 
@@ -60,10 +79,12 @@ var Spinner = React.createClass({
     if (this.props.disabled) return
 
     if (this.state.max > this.state.num) {
-      var num = this.state.num
-      this.setState({
-        num: ++num
-      })
+      var num = this.state.num + 1
+      if (typeof this.props.value === 'undefined') {
+        this.setState({
+          num: num
+        })
+      }
 
       this._onNumChange(num)
     }
@@ -73,11 +94,12 @@ var Spinner = React.createClass({
     if (this.props.disabled) return
 
     if (this.state.min < this.state.num) {
-      var num = this.state.num
-
-      this.setState({
-        num: --num
-      })
+      var num = this.state.num - 1
+      if (typeof this.props.value === 'undefined') {
+        this.setState({
+          num: num
+        })
+      }
 
       this._onNumChange(num)
     }

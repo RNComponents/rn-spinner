@@ -39,7 +39,8 @@ Property          | Description | Type | Default | Note
 ------------------|-------------|------|---------|-------
 max               | | number | 0  |
 min               | | number | 99 |
-default           | default number of the Spinner | number | 0 |
+default           | default number of the Spinner | number | 0 | You can define either `default` or `value`.
+value             | controlled value of the Spinner | number | undefined | If `value` is defined, then the value can change only via the property. This means that `onNumChange` must be defined and change external state.
 color             | custom color of the Spinner | string | '#33c9d6' |
 numColor          | custom number color | string | '#333' |
 numBgColor        | background color of number button | string | 'white' |
