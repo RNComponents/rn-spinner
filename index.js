@@ -138,7 +138,7 @@ var Spinner = React.createClass({
           onPress={this._increase}>
           <Text style={[styles.btnText,
               { color: this.props.buttonTextColor, fontSize: this.props.btnFontSize
-              }]}>{this.props.decChar}</Text>
+              }]}>{this.props.incChar}</Text>
         </TouchableOpacity>
       </View>
     )
