@@ -24,7 +24,10 @@ var Spinner = React.createClass({
     buttonTextColor: PropTypes.string,
     disabled: PropTypes.bool,
     width: PropTypes.number,
-    height: PropTypes.number
+    height: PropTypes.number,
+    incChar: PropTypes.string,
+    decChar: PropTypes.string,
+    suffix: PropTypes.string
   },
 
   getDefaultProps () {
@@ -41,7 +44,10 @@ var Spinner = React.createClass({
       buttonTextColor: 'white',
       disabled: false,
       width: 90,
-      height: 30
+      height: 30,
+      incChar: '+',
+      decChar: '-',
+      suffix: ''
     }
   },
 
@@ -117,12 +123,12 @@ var Spinner = React.createClass({
             { height: this.props.height } ]}
           onPress={this._decrease}>
           <Text style={[styles.btnText,
-              { color: this.props.buttonTextColor, fontSize: this.props.btnFontSize }]}>-</Text>
+              { color: this.props.buttonTextColor, fontSize: this.props.btnFontSize }]}>{this.props.decChar}</Text>
         </TouchableOpacity>
         <View style={[styles.num,
             { borderColor: this.props.showBorder ? this.props.color : 'transparent', backgroundColor: this.props.numBgColor, height: this.props.height
             }]}>
-          <Text style={[styles.numText, {color: this.props.numColor, fontSize: this.props.fontSize}]}>{this.state.num}</Text>
+          <Text style={[styles.numText, {color: this.props.numColor, fontSize: this.props.fontSize}]}>{this.state.num}{this.props.suffix}</Text>
         </View>
         <TouchableOpacity
           style={[styles.btn,
@@ -132,7 +138,7 @@ var Spinner = React.createClass({
           onPress={this._increase}>
           <Text style={[styles.btnText,
               { color: this.props.buttonTextColor, fontSize: this.props.btnFontSize
-              }]}>+</Text>
+              }]}>{this.props.incChar}</Text>
         </TouchableOpacity>
       </View>
     )
