@@ -52,6 +52,9 @@ btnFontSize       | custom fontSize of buttons in the Spinner | number | 14 |
 buttonTextColor   | custom color of the button in the Spinner | string | 'white' |
 width             | custom width of the Spinner | number | 90 |
 height            | custom height of the Spinner | number | 30 |
+decChar           | custom character to use for the decrement button | string | '-' |
+incChar           | custom character to use for the increment button | string | '+' |
+suffix            | suffix string added after the number. For example F for Farenheit | string | '' |
 
 ## Screenshot
 
